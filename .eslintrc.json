@@ -7,6 +7,9 @@
 		"browser": true
 	},
 	"parser": "babel-eslint",
+	"rules": {
+		"react/prop-types": "off"
+	},
 	"settings": {
 		"react": {
 			"version": "detect"

@@ -16,7 +16,7 @@ const DocsSelector = styled(class DocsSelector extends React.Component {
 						color: id === this.props.id && "#0406a2",
 					}}>
 						{source.name}
-					</Link>
+					</Link>;
 				})}
 			</List>
 		</div>;

@@ -37,9 +37,9 @@ const PageSelector = styled(class PageSelector extends React.Component {
 
 	render() {
 		if (!this.props.source) {
-			return <div className={this.props.className}>Select a source...</div>
+			return <div className={this.props.className}>Select a source...</div>;
 		} else if (!this.state.loaded) {
-			return <div className={this.props.className}>Loading...</div>
+			return <div className={this.props.className}>Loading...</div>;
 		}
 
 		return <div className={this.props.className}>
@@ -49,7 +49,7 @@ const PageSelector = styled(class PageSelector extends React.Component {
 						color: page.id === this.props.page && "#0406a2",
 					}}>
 						{page.title}
-					</Link>
+					</Link>;
 				})}
 			</List>;
 		</div>;

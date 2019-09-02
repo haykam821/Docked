@@ -39,7 +39,7 @@ const PageView = styled(class PageView extends React.Component {
 		} else if (!this.state.loaded) {
 			return <div className={this.props.className}>Loading...</div>;
 		}
-		
+
 		return <div className={this.props.className}>
 			<pre>
 				{this.props.source.pages[this.props.page]}

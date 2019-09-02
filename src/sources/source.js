@@ -1,3 +1,6 @@
+/**
+ * A documentation source.
+ */
 class Source {
 	constructor(name) {
 		this.name = name || "Unknown Source";
@@ -7,12 +10,18 @@ class Source {
 	}
 
 	/**
+	 * Fetches the documentation source's page list.
 	 * @abstract
+	 * @returns {string[]} The documentation pages provided by the source.
 	 */
 	fetchNavRaw() {
-		return null;
+		return [];
 	}
 
+	/**
+	 * Fetches and caches the documentation source's page list.
+	 * @returns {string[]} The documentation pages provided by the source.
+	 */
 	async fetchNav() {
 		if (!Array.isArray(this.nav) || this.nav.length === 0) {
 			return this.nav = await this.fetchNavRaw();
@@ -20,14 +29,19 @@ class Source {
 	}
 
 	/**
+	 * Fetches a page's contents.
 	 * @abstract
+	 * @param {string} id The slug/identifier of the page to fetch.
+	 * @returns {string} The page contents.
 	 */
 	fetchPageRaw(id) {
 		return `Page with ID ${id}`;
 	}
 
 	/**
-	 * Returns the content of a page by its ID.
+	 * Fetches and caches a page's contents.
+	 * @param {string} id The slug/identifier of the page to fetch.
+	 * @returns {string} The page contents.
 	 */
 	async fetchPage(id) {
 		if (!this.pages[id]) {

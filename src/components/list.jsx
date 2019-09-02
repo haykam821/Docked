@@ -14,7 +14,7 @@ const List = styled(class List extends React.Component {
 					</li>;
 				})}
 			</ul>
-		</div>
+		</div>;
 	}
 })`
 	${TextLine} {
