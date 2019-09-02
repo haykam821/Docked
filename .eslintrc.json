@@ -1,0 +1,15 @@
+{
+	"extends": [
+		"eslint-config-haykam",
+		"plugin:react/recommended"
+	],
+	"env": {
+		"browser": true
+	},
+	"parser": "babel-eslint",
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
+}
